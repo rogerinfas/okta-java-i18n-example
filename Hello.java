@@ -14,7 +14,7 @@ public class Hello {
             country = args[1];
         }
 
-        var locale = new Locale(language, country);
+        var locale = Locale.forLanguageTag(language + "-" + country);
         var messages = ResourceBundle.getBundle("messages", locale);
 
         System.out.print(messages.getString("hello") + " ");
