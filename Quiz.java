@@ -11,7 +11,7 @@ public class Quiz {
             language = args[0];
         }
 
-        var locale = new Locale(language);
+        var locale = Locale.forLanguageTag(language);
         var messages = ResourceBundle.getBundle("quiz", locale);
         var scanner = new Scanner(System.in);
 
